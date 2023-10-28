@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfgnpbsu42yel"]
+
+[ext_resource type="AudioStream" uid="uid://c8llhgxtk086b" path="res://art/game start sound_Ringtone.mp3" id="1_icthd"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_icthd")
+volume_db = 0.76
+autoplay = true

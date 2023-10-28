@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://cyhvhveswk4jh"]
+
+[ext_resource type="Texture2D" uid="uid://cflcmeqod5e1e" path="res://art/360_F_475523051_hDUIwKoESIqF2oVSjBlDEXVhWYjuljOL-removebg-preview.png" id="1_vmrmp"]
+[ext_resource type="Texture2D" uid="uid://btm4yvmt50fxa" path="res://art/sticker.webp" id="1_xigd7"]
+[ext_resource type="Texture2D" uid="uid://cp0q0h6raru1n" path="res://art/kenworth-semi-pixel-art-11563195563smw4axfnui-removebg-preview.png" id="2_mggmj"]
+[ext_resource type="Texture2D" uid="uid://dgvh02xnxy0wd" path="res://art/photo_2023-10-28_04-39-52-removebg-preview.png" id="3_7b8oa"]
+[ext_resource type="Texture2D" uid="uid://kltgbdxhahra" path="res://art/unnamed.png" id="5_7dphq"]
+[ext_resource type="Texture2D" uid="uid://bjnngneq84ru3" path="res://art/v2.png" id="6_und4b"]
+[ext_resource type="Texture2D" uid="uid://df1sdupj5jbw4" path="res://art/unnamed (1).png" id="7_s8xle"]
+
+[sub_resource type="Animation" id="Animation_pg84l"]
+resource_name = "veh "
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1045, 33), Vector2(1238, 40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8gpgm"]
+_data = {
+"veh ": SubResource("Animation_pg84l")
+}
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(-1045, 33)
+scale = Vector2(0.283333, 0.284722)
+texture = ExtResource("1_vmrmp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1591.32, 0)
+scale = Vector2(1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 0.5
+libraries = {
+"": SubResource("AnimationLibrary_8gpgm")
+}
+
+[node name="Kenworth-semi-pixel-art-11563195563Smw4Axfnui-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(442.207, 86.6573)
+texture = ExtResource("2_mggmj")
+flip_h = true
+
+[node name="Photo2023-10-2804-39-52-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1469.27, 9.38901)
+scale = Vector2(0.696722, 0.662937)
+texture = ExtResource("3_7b8oa")
+
+[node name="Sticker" type="Sprite2D" parent="."]
+position = Vector2(1737.5, 135.828)
+scale = Vector2(0.672335, 0.707959)
+texture = ExtResource("1_xigd7")
+flip_h = true
+
+[node name="Unnamed" type="Sprite2D" parent="."]
+position = Vector2(2817.5, -39.7817)
+scale = Vector2(0.495231, 0.626947)
+texture = ExtResource("5_7dphq")
+
+[node name="V2" type="Sprite2D" parent="."]
+position = Vector2(3399.86, 65.5841)
+scale = Vector2(0.361526, 0.361526)
+texture = ExtResource("6_und4b")
+
+[node name="Unnamed(1)" type="Sprite2D" parent="."]
+position = Vector2(2224.56, 44.5109)
+scale = Vector2(0.659645, 0.659645)
+texture = ExtResource("7_s8xle")

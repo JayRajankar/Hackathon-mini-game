@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://dterlx1ekm2qf"]
+
+[ext_resource type="Script" path="res://orbs.gd" id="1_hgbdc"]
+[ext_resource type="Texture2D" uid="uid://cbjt7gxwrvc1o" path="res://art/dendro.png" id="2_0p4ug"]
+[ext_resource type="Texture2D" uid="uid://vl16llofg1r5" path="res://art/geo.png" id="3_wk48g"]
+[ext_resource type="Texture2D" uid="uid://buodygn6kp4oj" path="res://art/hydro.png" id="4_ksa6g"]
+[ext_resource type="Texture2D" uid="uid://4jbxys53bd6c" path="res://art/animo.png" id="5_qydtx"]
+
+[sub_resource type="GDScript" id="GDScript_4i2ky"]
+script/source = "extends Sprite2D
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+
+	position.y +=5 
+"
+
+[sub_resource type="GDScript" id="GDScript_tb1py"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	
+	position.y +=5 
+
+"
+
+[sub_resource type="GDScript" id="GDScript_lkqyo"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+
+	position.y +=5 
+"
+
+[sub_resource type="GDScript" id="GDScript_ko2n6"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+
+	position.y +=5 
+"
+
+[node name="orbs" type="Node2D"]
+script = ExtResource("1_hgbdc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(222, -32)
+scale = Vector2(0.306641, 0.246094)
+texture = ExtResource("2_0p4ug")
+script = SubResource("GDScript_4i2ky")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(728, -39)
+scale = Vector2(0.261719, 0.259765)
+texture = ExtResource("3_wk48g")
+script = SubResource("GDScript_tb1py")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(484, -44)
+scale = Vector2(0.332031, 0.300781)
+texture = ExtResource("4_ksa6g")
+script = SubResource("GDScript_lkqyo")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1007, -35)
+scale = Vector2(0.318359, 0.300781)
+texture = ExtResource("5_qydtx")
+script = SubResource("GDScript_ko2n6")

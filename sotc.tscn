@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://g4gje6g1e8rm"]
+
+[ext_resource type="Texture2D" uid="uid://b0ups81mve5xj" path="res://The world is under chaos being attacked by pollution monsters..png" id="2"]
+[ext_resource type="Script" path="res://sotc.gd" id="3"]
+
+[node name="sotc" type="Node2D"]
+script = ExtResource("3")
+
+[node name="TheWorldIsUnderChaosBeingAttackedByPollutionMonsters" type="Sprite2D" parent="."]
+position = Vector2(513.875, 315.5)
+scale = Vector2(0.527995, 0.565741)
+texture = ExtResource("2")
+
+[node name="start" type="Button" parent="."]
+offset_left = 267.0
+offset_top = 342.0
+offset_right = 447.0
+offset_bottom = 420.0
+text = "START"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 336.0
+offset_right = 820.0
+offset_bottom = 414.0
+text = "QUIT"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

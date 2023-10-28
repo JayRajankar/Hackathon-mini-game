@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cygol3bakja4v"]
+
+[ext_resource type="Texture2D" path="res://art/animo.png" id="2_drhby"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(-7, 8)
+scale = Vector2(0.945313, 0.9375)
+texture = ExtResource("2_drhby")
